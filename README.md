@@ -20,7 +20,7 @@ The architecture looks like the below:
 
 ![td-lstm](assets/bert_ssc.jpg)
 
-Fpr more details, please see **data_process.py, train.py and model/bert_ssc.py**.
+Fr more details, please see **data_process.py, train.py and model/bert_ssc.py**.
 
 # Result
 Due to lacking of GPU resoruces, the fine-tuning model stops training at only 2 epochs.., the validating
