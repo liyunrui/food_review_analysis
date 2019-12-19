@@ -21,10 +21,9 @@ class BERT_SSC(nn.Module):
         # text_bert_len = torch.sum(text_bert_indices != 0, dim=-1)
         # text_bert_indices = self.squeeze_embedding(text_bert_indices, text_bert_len)
         # bert_segments_ids = self.squeeze_embedding(bert_segments_ids, text_bert_len)
-        try:
-            _, pooled_output = self.bert(text_bert_indices, output_all_encoded_layers=False)
-        except:
-            print (text_bert_indices)
+        _, pooled_output = self.bert(text_bert_indices, output_all_encoded_layers=False)
         pooled_output = self.dropout(pooled_output)
         logits = self.dense(pooled_output)
         return logits
+        
+        

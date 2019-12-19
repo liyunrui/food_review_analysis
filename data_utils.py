@@ -55,7 +55,7 @@ class ABSADataset(Dataset):
             # label
             
             #print (polarity)
-            polarity = int(polarity)
+            polarity = int(polarity) - 1 # range betwee 0 to num_class -1
 
             data = {
                 'text_raw_bert_indices': text_raw_bert_indices,
