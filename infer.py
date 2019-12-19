@@ -75,7 +75,7 @@ input_colses = {
 }
 # set your trained models here
 model_state_dict_paths = {
-    'bert_ssc':'/Users/yunruili/review_prediction/state_dict/bert_ssc_restaurant_val_acc0.466',
+    'bert_ssc':'../state_dict/bert_ssc_restaurant_val_acc0.466',
 }
 
 opt = AttrDict()
@@ -105,14 +105,23 @@ inf = Inferer(opt)
 submit_path = "result/submission.csv"
 submission = pd.read_csv(submit_path)
 # save 
-t_probs = inf.evaluate(
-    submission.review.tolist(),
-    input_cols = opt.inputs_cols
-    )
+#t_probs = inf.evaluate(
+#    submission.review.tolist(),
+#    input_cols = opt.inputs_cols
+#    )
 #print (t_probs)
-prediction = t_probs.argmax(axis=-1) +1
+#prediction = t_probs.argmax(axis=-1) +1
 #print(prediction)
-submission["rating"] = prediction
+predictions = []
+for review in submission.review:
+    t_probs = inf.evaluate(
+        [review],
+        input_cols = opt.inputs_cols
+        )
+    prediction = t_probs.argmax(axis=-1) +1
+    predictions.append(prediction[0])
+
+submission["rating"] = predictions
 submission.to_csv(submit_path, index=False)
 
 
