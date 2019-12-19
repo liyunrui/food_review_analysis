@@ -13,9 +13,12 @@ pre-trained language model, **bert-base-multilingual-cased**, which is realesed 
 it support 104 languages including Thai.
 
 It will make our tokenization result makes more sense, see blow screenshot as an example.
+![td-lstm](assets/tokenization.jpg)
 
 Then, as followed the **BERT Paper** suggested how to fine-tune single sentence classification.
 The architecture looks like the below:
+
+![td-lstm](assets/bert_ssc.jpg)
 
 Fpr more details, please see **data_process.py, train.py and model/bert_ssc.py**.
 
