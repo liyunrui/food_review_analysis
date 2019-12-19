@@ -23,7 +23,7 @@ The architecture looks like the below:
 Fpr more details, please see **data_process.py, train.py and model/bert_ssc.py**.
 
 # Result
-Due to lacking of GPU resoruces, the fine-tuning model only stopped and 2 epochs.., the validating
+Due to lacking of GPU resoruces, the fine-tuning model stops training at only 2 epochs.., the validating
 accuracy and f1-score could refer to **bert_ssc-restaurant-191219-0740.log**
 # Usage
 
