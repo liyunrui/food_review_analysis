@@ -4,7 +4,7 @@ Quick prototype of food review analysis using machine learning
 # Probelm Description
 
 The problem is given a text review in Thai, to clasify this review into 5 differet claases. 
-So, obviously it's a text classifcation task.
+So, obviously it's a text multl-class classifcation task.
 
 # Methods
 
