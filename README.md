@@ -9,13 +9,13 @@ So, obviously it's a text multl-class classifcation task.
 # Methods
 
 Because we don't have enough Thai corpus to train on our own language model, we use
-pre-trained language model, **bert-base-multilingual-cased**, which is realesed by Google and 
-it support 104 languages including Thai.
+pre-trained language model, **bert-base-multilingual-cased**, which is realesed by Google 
+and it supports 104 languages including Thai.
 
 It will make our tokenization result makes more sense, see blow screenshot as an example.
 ![td-lstm](assets/tokenization.jpg)
 
-Then, as followed the **BERT Paper** suggested how to fine-tune single sentence classification.
+Then, as followed the **BERT Paper** suggested how to fine-tune single sentence classification with pre-trained language model.
 The architecture looks like the below:
 
 ![td-lstm](assets/bert_ssc.jpg)
